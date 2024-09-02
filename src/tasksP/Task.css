@@ -1,0 +1,30 @@
+.main{
+   
+    max-width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+li{
+    max-width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
