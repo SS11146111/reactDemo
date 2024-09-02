@@ -26,3 +26,7 @@ button.add{
 button.sub{
     background-color: red;
 }
+
+button.reset{
+    background-color: rgb(0, 0, 0);
+}
