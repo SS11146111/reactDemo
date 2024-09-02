@@ -9,7 +9,7 @@ export default function Task() {
                                             {id: 7825, name: "Edit React Lectures", completed: false}, 
                                             {id: 8391, name: "Watch Lectures", completed: false}
                                         ])
-
+    const [show, setShow] = useState(true)
 
     function handleDelete(id)
     {
@@ -21,8 +21,9 @@ export default function Task() {
         <div className="main">
             <h1>Task List</h1>
             <ul>
-                { tasks.map((task) => (
-                    <li key={task.id}>
+                <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
+                { show && tasks.map((task) => (
+                    <li key={task.id} className={task.completed ? "complete" : "incomplete"}>
                         <span>{task.id} - {task.name}</span>
                         <button onClick={() => handleDelete(task.id)} className='delete'>Delete</button>
                     </li>

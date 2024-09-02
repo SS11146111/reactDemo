@@ -13,7 +13,7 @@ h1{
 
 li{
     max-width: 600px;
-    margin: auto;
+    margin: 10px auto;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
     padding: 10px;
@@ -27,4 +27,22 @@ li{
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+.toggle{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 5px;
+ 
+}
+
+.complete{
+    box-shadow: rgb(63, 197, 61) 0px 1px 4px;
+}
+
+.incomplete{
+    box-shadow: rgb(213, 144, 6) 0px 1px 4px;
 }
