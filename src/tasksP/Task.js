@@ -4,7 +4,7 @@ import { BoxCard } from "./BoxCard";
 import "./Task.css"
 
 
-export default function Task(props) {
+export default function Task({title, info}) {
 
     const [tasks, setTasks] = useState([
                                             {id: 5271, name: "Record React Lectures", completed: true}, 
@@ -21,7 +21,7 @@ export default function Task(props) {
     return (
     
         <div className="main">
-            <h1>{props.title} to Task List</h1>
+            <h1>{title} to Task List</h1>
             <ul>
                 <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
                 { show && tasks.map((task) => (
@@ -29,11 +29,11 @@ export default function Task(props) {
                 ))      
                 }
             </ul>
-            <BoxCard result="success">
+            <BoxCard result="success" info={info}>
                 <p className="title">Lorem, ipsum.</p>
                 <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, vel.</p>
             </BoxCard>
-            <BoxCard result="alert">
+            <BoxCard result="alert" info={info}>
                 <p className="title">Lorem, ipsum.</p>
                 <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, vel.</p>
             </BoxCard>

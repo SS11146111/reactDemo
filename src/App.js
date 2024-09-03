@@ -5,12 +5,12 @@ import Header from "./components/Header";
 
 
 function App() {
-
+  const info = "Hi";
   return (
     <div className="App">
       {/*<Counter/>*/}
       <Header/>
-      <Task title="Welcome"/>
+      <Task title="Welcome" info={info}/>
     </div>
   );
 }
