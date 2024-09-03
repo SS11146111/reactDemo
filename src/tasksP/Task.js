@@ -1,8 +1,10 @@
+import { TaskCard } from "./TaskCard";
 import { useState } from "react";
+import { BoxCard } from "./BoxCard";
 import "./Task.css"
 
 
-export default function Task() {
+export default function Task(props) {
 
     const [tasks, setTasks] = useState([
                                             {id: 5271, name: "Record React Lectures", completed: true}, 
@@ -19,17 +21,22 @@ export default function Task() {
     return (
     
         <div className="main">
-            <h1>Task List</h1>
+            <h1>{props.title} to Task List</h1>
             <ul>
                 <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
                 { show && tasks.map((task) => (
-                    <li key={task.id} className={task.completed ? "complete" : "incomplete"}>
-                        <span>{task.id} - {task.name}</span>
-                        <button onClick={() => handleDelete(task.id)} className='delete'>Delete</button>
-                    </li>
-                    ))      
+                    <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
+                ))      
                 }
             </ul>
+            <BoxCard result="success">
+                <p className="title">Lorem, ipsum.</p>
+                <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, vel.</p>
+            </BoxCard>
+            <BoxCard result="alert">
+                <p className="title">Lorem, ipsum.</p>
+                <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, vel.</p>
+            </BoxCard>
         </div>
     )
 }

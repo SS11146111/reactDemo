@@ -1,0 +1,15 @@
+.home{
+    
+    text-decoration: none;
+    color: black;
+    align-self: center;
+    margin-left: 10px;
+  
+    
+}
+
+.header{
+    background-color: blanchedalmond;
+    display: flex;
+   
+}

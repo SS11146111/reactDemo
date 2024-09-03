@@ -1,6 +1,6 @@
 .main{
    
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
@@ -11,8 +11,13 @@ h1{
     text-align: center;
 }
 
+ul{
+    margin: auto;
+  
+}
+
 li{
-    max-width: 600px;
+    max-width: 500px;
     margin: 10px auto;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
@@ -36,6 +41,7 @@ li{
     border-radius: 5px;
     padding: 2px;
     margin-bottom: 5px;
+    margin-left: 165px;
  
 }
 
@@ -45,4 +51,34 @@ li{
 
 .incomplete{
     box-shadow: rgb(213, 144, 6) 0px 1px 4px;
+}
+
+.box{
+    max-width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    padding: 10px;
+}
+
+.success{
+    background-color: lightgreen;
+    margin-bottom: 10px;
+}
+
+.alert{
+    background-color: lightcoral;
+    margin-bottom: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.trigger{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
 }
