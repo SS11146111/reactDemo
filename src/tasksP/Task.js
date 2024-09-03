@@ -21,9 +21,9 @@ export default function Task({title, info}) {
     return (
     
         <div className="main">
-            <h1>{title} to Task List</h1>
+            <h1 style={{color: show?"green":"red"}}>{title} to Task List</h1>
             <ul>
-                <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
+                <button className="toggle" onClick={()=>setShow(!show)}>{show?"Hide":"Show"}</button>
                 { show && tasks.map((task) => (
                     <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
                 ))      
